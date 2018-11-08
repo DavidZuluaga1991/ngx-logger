@@ -8,7 +8,7 @@ export const BaseLoggerProvider = new InjectionToken<LoggerBase>('LoggerBase');
 })
 export class LoggersService {
 
-  constructor(@Inject(BaseLoggerProvider) readonly looger) { }
+  constructor(@Inject(BaseLoggerProvider) readonly looger: LoggerBase) { }
 
   getLogger(){
     this.looger.trace('trace');
@@ -19,3 +19,8 @@ export class LoggersService {
     this.looger.error('error');
   }
 }
+
+/*
+tiempo de ejecucion
+tiempo de compilación
+*/

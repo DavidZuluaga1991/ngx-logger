@@ -1,9 +1,5 @@
-import { Injectable } from "@angular/core";
-import { LoggerBase,BaseLogger } from "./base/loggerBase";
+import { LoggerBase } from "./base/loggerBase";
 
-export const AutoLoggerBase = BaseLogger;
-
-@Injectable()
 export class CustomerLogger extends LoggerBase {
   constructor() {
     super();
@@ -12,40 +8,40 @@ export class CustomerLogger extends LoggerBase {
    * trace
    */
   public trace(message: string) {
-    console.log('trace '+message);
+    console.log('customer '+message);
   }
   /**
    * debug
    */
   public debug(message: string) {
-    console.log('debug '+message);
+    console.log('customer '+message);
   }
 
   /**
    * info
    */
   public info(message: string) {
-    console.log('info '+message);
+    console.log('customer '+message);
   }
 
   /**
    * log
    */
   public log(message: string) {
-    console.log('log '+message);
+    console.log('customer '+message);
   }
 
   /**
    * warn
    */
   public warn(message: string) {
-    console.log('warn '+message);
+    console.log('customer '+message);
   }
 
   /**
    * error
    */
   public error(message: string) {
-    console.log('error '+message);
+    console.log('customer '+message);
   }
 }

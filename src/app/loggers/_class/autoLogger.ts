@@ -1,20 +1,23 @@
-import { Injectable } from "@angular/core";
 import { NGXLogger } from "ngx-logger";
-import { LoggerBase, BaseLogger } from "./base/loggerBase";
+import { LoggerBase } from "./base/loggerBase";
 
-export const AutoLoggerBase = BaseLogger;
+export function loggerFuntion(ngxlog: NGXLogger, logg?: LoggerBase) {
+  return (logg != null && logg != undefined) ? logg : new AutoLogger(ngxlog)
+}
 
-@Injectable()
 export class AutoLogger extends LoggerBase {
+
   constructor(private logger: NGXLogger) {
     super();
   }
+
   /**
    * trace
    */
   public trace(message: string) {
     this.logger.trace(message);
   }
+  
   /**
    * debug
    */

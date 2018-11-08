@@ -35,5 +35,4 @@ export abstract class LoggerBase {
        */
       public abstract error(message: string): void
 
-    
 }
