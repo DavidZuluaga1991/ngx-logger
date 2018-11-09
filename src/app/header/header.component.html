@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">
-  <span>workplan</span>
+  <button mat-button [routerLink]="['home']">
+    <span>workplan</span>
+  </button>
   <span class="example-spacer"></span>
   <button mat-button [matMenuTriggerFor]="appMenu">
     <mat-icon>menu</mat-icon> Menu
@@ -16,35 +18,16 @@
   </button>
   <mat-menu #menu="matMenu">
       <button mat-menu-item [routerLink]="['lazyload']">
-        <mat-icon>dialpad</mat-icon>
-        <span>pro</span>
+        <mat-icon>domain</mat-icon>
+        <span>Test Lazy Load</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voicemail</span>
+      <button mat-menu-item [routerLink]="['home']">
+        <mat-icon>store</mat-icon>
+        <span>home</span>
       </button>
-      <button mat-menu-item>
+      <!--<button mat-menu-item>
         <mat-icon>notifications_off</mat-icon>
         <span>Disable alerts</span>
-      </button>
+      </button>-->
     </mat-menu>
 </mat-menu>
-<!--<mat-card>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="logger">
-      <mat-icon>dialpad</mat-icon>
-      <span>Logger</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voicemail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu>
-</mat-card>-->

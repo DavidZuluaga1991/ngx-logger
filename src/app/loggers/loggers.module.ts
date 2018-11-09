@@ -4,6 +4,8 @@ import { LoggerBase } from './_class/base/loggerBase';
 import { loggerFuntion } from './_class/autoLogger';
 import { LoggerModule, NgxLoggerLevel,NGXLogger, LoggerConfig } from 'ngx-logger';
 import { LoggersService, BaseLoggerProvider } from './_service/loggers.service';
+import { LoggersRoutingModule } from './_routing/loggers-routing.module';
+import {MatButtonModule} from '@angular/material/button';
 
 export const BaseLogger = new InjectionToken<LoggerBase>('LoggerBase');
 
@@ -11,6 +13,8 @@ export const BaseLogger = new InjectionToken<LoggerBase>('LoggerBase');
   imports: [
     CommonModule,
     LoggerModule.forRoot({ level: NgxLoggerLevel.DEBUG }),
+    LoggersRoutingModule,
+    MatButtonModule
   ],
   declarations: []
 })

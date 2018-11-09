@@ -1,27 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoggersComponent } from './../loggers/loggers.component';
-import { LazyloadingComponent } from './../lazyloading/lazyloading.component';
 
 const appRoutes: Routes = [
   {
-    path: 'logger',
-    component: LoggersComponent
+    path: 'home',
+    loadChildren: './../home/_routing/home-routing.module#HomeRoutingModule'
+  },
+  {
+    path: 'loggers',
+    loadChildren: './../loggers/_routing/loggers-routing.module#LoggersRoutingModule'
   },
   {
     path: 'lazyload',
-    component: LazyloadingComponent
+    loadChildren: './../lazyloading/_routing/lazyloading-routing.module#LazyloadingRoutingModule'
   },
   {
-    path:'**',
-    redirectTo: 'logger',
+    path:'',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
-];
-
-export const routedComponents = [
-  LoggersComponent,
-  LazyloadingComponent
 ];
 
 @NgModule({

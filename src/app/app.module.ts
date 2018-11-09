@@ -6,9 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { HeaderComponent } from './header/header.component';
-import { AppRoutingModule,routedComponents } from './routing/app-routing.module';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { LoggersModule } from './loggers/loggers.module';
-import { CustomerLogger } from './loggers/_class/customLogger';
 
 import {
   MatButtonModule,
@@ -27,7 +26,6 @@ import { NgxLoggerLevel } from 'ngx-logger';
   declarations: [
     AppComponent,
     HeaderComponent,
-    routedComponents
   ],
   imports: [
     BrowserModule,
@@ -44,7 +42,8 @@ import { NgxLoggerLevel } from 'ngx-logger';
     LoggersModule.forRoot(
       { level: NgxLoggerLevel.DEBUG },
       //new CustomerLogger()
-    )
+    ),
+    LoggersModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
