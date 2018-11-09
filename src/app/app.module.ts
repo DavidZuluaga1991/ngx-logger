@@ -17,7 +17,8 @@ import {
   MatCardModule,
   MatSelectModule,
   MatOptionModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { NgxLoggerLevel } from 'ngx-logger';
 
@@ -38,6 +39,7 @@ import { NgxLoggerLevel } from 'ngx-logger';
     MatSelectModule,
     MatOptionModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
     LoggersModule.forRoot(
       { level: NgxLoggerLevel.DEBUG },

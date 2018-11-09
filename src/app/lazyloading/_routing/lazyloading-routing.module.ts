@@ -4,6 +4,10 @@ import { LazyloadingComponent } from '../lazyloading.component';
 
 const appRoutes: Routes = [
   {
+    path: '',
+    component: LazyloadingComponent
+  },
+  /*{
     path: 'lazyloading',
     component: LazyloadingComponent
   },
@@ -11,7 +15,7 @@ const appRoutes: Routes = [
     path:'**',
     redirectTo: 'lazyloading',
     pathMatch: 'full'
-  }
+  }*/
 ];
 
 @NgModule({
