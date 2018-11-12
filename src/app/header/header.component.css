@@ -1,3 +1,18 @@
 .example-spacer {
     flex: 1 1 auto;
-    }
+}
+
+.example-button-row button,
+.example-button-row a {
+    margin-right: 8px;
+    overflow-x: hidden;
+}
+
+.button-art {
+    width: 140px;
+    margin: 3px 0px 0px 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0.1px;
+}

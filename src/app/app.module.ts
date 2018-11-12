@@ -18,8 +18,13 @@ import {
   MatSelectModule,
   MatOptionModule,
   MatFormFieldModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatSliderModule,
+  MatSidenavModule,
+  MatTabsModule
 } from '@angular/material';
+
 import { NgxLoggerLevel } from 'ngx-logger';
 
 
@@ -40,6 +45,10 @@ import { NgxLoggerLevel } from 'ngx-logger';
     MatOptionModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatTabsModule,
     AppRoutingModule,
     LoggersModule.forRoot(
       { level: NgxLoggerLevel.DEBUG },

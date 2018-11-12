@@ -4,7 +4,14 @@
   <button mat-menu-item>Item 1</button>
   <button mat-menu-item>Item 2</button>
 </mat-menu>-->
-<app-header></app-header>
-<mat-card class="demo-panel">
-    <router-outlet></router-outlet>
-</mat-card>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="container">
+        <app-header></app-header>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-card class="demo-panel">
+            <router-outlet></router-outlet>
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>

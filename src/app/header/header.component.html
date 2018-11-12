@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<!--<mat-toolbar color="primary">
   <button mat-button [routerLink]="['home']">
     <span>workplan</span>
   </button>
@@ -25,9 +25,10 @@
         <mat-icon>store</mat-icon>
         <span>home</span>
       </button>
-      <!--<button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button>-->
     </mat-menu>
-</mat-menu>
+</mat-menu>-->
+<div class="example-button-row">
+    <button mat-raised-button [routerLink]="['home']" class="cursor-art button-art"><mat-icon>store</mat-icon> Home</button>
+    <button mat-raised-button [routerLink]="['lazyload']" class="cursor-art button-art"><mat-icon>domain</mat-icon> Lazyload</button>
+    <button mat-raised-button [routerLink]="['logger']" class="cursor-art button-art"><mat-icon>dialpad</mat-icon> Logger</button>
+</div>

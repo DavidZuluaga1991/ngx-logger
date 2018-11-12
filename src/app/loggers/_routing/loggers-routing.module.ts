@@ -7,11 +7,11 @@ const appRoutes: Routes = [
     path: 'logger',
     component: LoggersComponent
   },
-  {
+  /*{
     path:'**',
     redirectTo: 'logger',
     pathMatch: 'full'
-  }
+  }*/
 ];
 
 @NgModule({
