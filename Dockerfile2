@@ -9,13 +9,17 @@ WORKDIR /app
 ADD package.json /app/
 RUN cd /app && npm set progress=false && npm install
 # Copy project files into the docker image
-ADD . /app
-RUN cd /app && npm run build:ssr -- --output-path=./dist/ && ls
+ADD .  /app
+RUN cd /app && npm run build
+#RUN cd /app && npm run build:ssr -- --output-path=./dist/out --configuration $configuration
+#RUN npm run build -- --output-path=./dist/out --configuration $configuration
 
-FROM node:alpine
+FROM nginx:alpine
+
 MAINTAINER david.zuluaga@bitsamericas.com
-RUN apk update && apk add --no-cache make && mkdir /app/dist
-WORKDIR /app
-COPY --from=builder /app/dist/ .
-RUN mv ./browser dist/ && mv ./server dist/
-CMD ["node", "server.js"]
+
+ADD nginx.conf /etc/nginx/nginx.conf
+
+WORKDIR /usr/share/nginx/html
+
+COPY --from=linuxalpine /app/dist/out/ .
