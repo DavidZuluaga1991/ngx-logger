@@ -34,7 +34,7 @@ import { NgxLoggerLevel } from 'ngx-logger';
     HeaderComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     MatMenuModule,
     MatIconModule,
     BrowserAnimationsModule,
