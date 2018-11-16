@@ -1,5 +1,7 @@
-# Logger
+# Leazy Load para el proyecto Logger
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+Se implementa Leazy Load para el proyecto Logger
 
-## Development server
+## Logger
+
+Proyecto para entender InjectionToken
